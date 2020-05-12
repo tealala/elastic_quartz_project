@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="elastic-spring-boot" />
+        <module name="elasticjobproject" />
+        <module name="quartz_project" />
+        <module name="quartz_springboot" />
+        <module name="spring-quartz" />
+        <module name="zookeeper-spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="elastic-spring-boot" target="1.8" />
+      <module name="elastic_quartz_project" target="1.8" />
+      <module name="elasticjobproject" target="1.8" />
+      <module name="quartz_project" target="1.8" />
+      <module name="quartz_springboot" target="1.8" />
+      <module name="spring-quartz" target="1.8" />
+      <module name="zookeeper-spring" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

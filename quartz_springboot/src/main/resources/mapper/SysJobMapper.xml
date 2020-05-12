@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tealala.demo.mapper.SysJobMapper">
+    <resultMap id="BaseResultMap" type="com.tealala.demo.entity.SysJob">
+        <!--@mbg.generated generated on Mon Apr 27 14:57:09 CST 2020.-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="job_name" jdbcType="VARCHAR" property="jobName"/>
+        <result column="job_group" jdbcType="VARCHAR" property="jobGroup"/>
+        <result column="job_cron" jdbcType="VARCHAR" property="jobCron"/>
+        <result column="job_class_path" jdbcType="VARCHAR" property="jobClassPath"/>
+        <result column="job_data_map" jdbcType="VARCHAR" property="jobDataMap"/>
+        <result column="job_status" jdbcType="INTEGER" property="jobStatus"/>
+        <result column="job_describe" jdbcType="VARCHAR" property="jobDescribe"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Mon Apr 27 14:57:09 CST 2020.-->
+        id, job_name, job_group, job_cron, job_class_path, job_data_map, job_status, job_describe
+    </sql>
+    <insert id="insertJob" parameterType="SysJob">
+        INSERT INTO `sys_job` (`id`, `job_name`, `job_group`, `job_cron`, `job_class_path`, `job_data_map`,
+        `job_status`, `job_describe`)
+        VALUES (#{sysJob.id,javaType=int},#{sysJob.jobName,jdbcType=VARCHAR},#{sysJob.jobGroup,jdbcType=VARCHAR},
+        #{sysJob.jobCron,jdbcType=VARCHAR},#{sysJob.jobClassPath,jdbcType=VARCHAR},
+        #{sysJob.jobDataMap,jdbcType=VARCHAR},#{sysJob.jobStatus,jdbcType=INTEGER},#{sysJob.jobDescribe,jdbcType=VARCHAR});
+    </insert>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        SELECT * FROM sys_job
+    </select>
+    <select id="querySysJobList" resultMap="BaseResultMap" parameterType="SysJob">
+        SELECT * from sys_job
+        WHERE 1=1
+        <if test="sysJob.id !=null ">
+            AND id = #{sysJob.id,jdbcType=INTEGER}
+        </if>
+        <if test="sysJob.jobName != null">
+            AND job_name = #{sysJob.jobName,jdbcType=VARCHAR}
+        </if>
+        <if test="sysJob.jobGroup!=null ">
+            AND job_group = #{sysJob.jobGroup,jdbcType=VARCHAR}
+        </if>
+        <if test="sysJob.jobCron !=null ">
+            AND job_cron = #{sysJob.jobCron,jdbcType=VARCHAR}
+        </if>
+        <if test="sysJob.jobClassPath != null ">
+            AND job_class_path = #{sysJob.jobClassPath,jdbcType=VARCHAR}
+        </if>
+        <if test="sysJob.jobDescribe != null ">
+            AND job_describe = #{sysJob.jobDescribe,jdbcType=VARCHAR}
+        </if>
+        <if test="sysJob.jobStatus != null ">
+            AND job_status = #{sysJob.jobStatus,jdbcType=INTEGER}
+        </if>
+        <if test="sysJob.jobDataMap != null ">
+            AND job_data_map = #{sysJob.jobDataMap,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+</mapper>

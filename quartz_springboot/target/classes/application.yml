@@ -1,0 +1,12 @@
+server:
+  port: 8080
+mybatis:
+  type-aliases-package: com.tealala.demo.entity
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/local_quartz?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root123
+    username: root
+

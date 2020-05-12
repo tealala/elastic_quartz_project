@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSerializeUid" value="true" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="com.tealala.demo.mapper" />
+        <option name="javaMapperPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+        <option name="javaModelPackage" value="com.tealala.demo.entity" />
+        <option name="javaModelPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="elastic_quartz_project" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="elastic_quartz_project">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.tealala.demo.mapper" />
+                  <option name="javaMapperPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+                  <option name="javaModelPacakge" value="com.tealala.demo.entity" />
+                  <option name="javaModelPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+                  <option name="javaServiceInterfacePackage" value="com.tealala.demo.service" />
+                  <option name="javaServiceInterfacePath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+                  <option name="javaServicePackage" value="com.tealala.demo.service.impl" />
+                  <option name="javaServicePath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\java" />
+                  <option name="xmlPackage" value="mapper.SysJobmapper.xml" />
+                  <option name="xmlPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="local_quartz:sys_job">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="SysJob" />
+                  <option name="moduleName" value="elastic_quartz_project" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useCommonMapper" value="true" />
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="mapper.SysJobmapper.xml" />
+        <option name="xmlMapperPath" value="D:\personPackage\quartz\quartz-project\elastic_quartz_project\quartz_springboot\src\main\resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+server:
+  port: 9090
+
+regCenter.serverList: 172.22.22.35:2181
+regCenter.namespace: spingboot-elasticjob
+
+tealala.job.simple.cron: 0/5 * * * * ?
+tealala.job.simple.shardingTotalCount: 4
+tealala.job.simple.shardingItemParameters: 0=sharding_1,1=sharding_2,2=sharding_3,3=sharding_4
+tealala.job.simple.jobParameter:  sbSimpleJob
+
+tealala.job.script.cron: 0/5 * * * * ?
+tealala.job.script.shardingTotalCount: 4
+tealala.job.script.shardingItemParameters: 0=sharding_1,1=sharding_2,2=sharding_3,3=sharding_4
+tealala.job.script.jobParameter:  sbScriptJob
+
+tealala.job.dataflow.cron: 0/5 * * * * ?
+tealala.job.dataflow.shardingTotalCount: 4
+tealala.job.dataflow.shardingItemParameters: 0=sharding_1,1=sharding_2,2=sharding_3,3=sharding_4
+tealala.job.dataflow.jobParameter:  sbDataflowJob
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.186.1:3306/local_quartz?useUnicode=true&useOldAliasMetadataBehavior=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: root123
